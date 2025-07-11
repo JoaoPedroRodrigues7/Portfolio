@@ -1,0 +1,1322 @@
+@import url('https://fonts.cdnfonts.com/css/tt-hoves-pro-trial');
+@import url('clash-grotesk.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-display: 'TT Hoves Pro Trial', sans-serif; /* Para títulos grandes */
+    --font-body: 'ClashGrotesk-Light', sans-serif;    /* Para textos de corpo */
+    --color-black: #1a1a1a; /* Preto mais suave */
+    --color-dark-gray: #2c2c2c; /* Cinza escuro para fundos */
+    --color-medium-gray: #666666; /* Cinza médio para textos secundários */
+    --color-light-gray: #cccccc; /* Cinza claro para detalhes */
+    --color-white: #f0f0f0; /* Branco suave */
+    --color-accent-primary: #e7fc00; /* Amarelo vibrante (destaque 1) */
+    --color-accent-secondary: #728e6f; /* Verde musgo (destaque 2) */
+    --color-whatsapp: #25D366; /* Verde WhatsApp */
+    --color-link: #00bfff; /* Azul para links de projeto */
+    --color-link-hover: #009acd; /* Azul mais escuro para hover */
+
+    --border-radius-small: 8px;
+    --border-radius-medium: 15px;
+    --border-radius-large: 50px; /* Para botões e cards arredondados */
+    --transition-speed: 0.3s ease-in-out;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-gray);
+    border-radius: 20px;
+    border: 3px solid var(--color-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-medium-gray);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-black);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    color: var(--color-white); /* Cor padrão do texto */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.3s ease-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-white);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Botões fixos*/
+.fixed-button {
+    position: fixed;
+    display: flex; /* Sempre flex para centralizar o ícone */
+    align-items: center;
+    justify-content: center;
+    width: 55px; /* Um pouco maior */
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden; /* Esconde completamente quando não visível */
+    transform: translateY(20px); /* Começa um pouco abaixo */
+    transition: opacity var(--transition-speed), transform var(--transition-speed), visibility var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+}
+
+.fixed-button.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop {
+    bottom: 25px;
+    left: 25px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+#whatsappButton {
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--color-whatsapp);
+    box-shadow: 0px 0px 15px rgba(37, 211, 102, 0.6); /* Sombra verde mais intensa */
+    animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1); /* Animação mais suave */
+}
+
+#whatsappButton i {
+    color: var(--color-white);
+}
+
+.fixed-button i {
+    font-size: 26px; /* Ícone um pouco maior */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+    }
+    50% {
+        transform: scale(1.08); /* Pulso mais sutil */
+        box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*************** HEADER *****/
+.header {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 1.5rem 2rem; /* Ajuste de padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    transition: top 0.3s ease-in-out;
+    background-color: rgba(26, 26, 26, 0.95); /* Cor mais escura e opaca */
+    backdrop-filter: blur(12px); /* Blur um pouco mais forte */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Linha sutil na parte inferior */
+}
+
+/* Logo */
+.logo {
+    width: auto; /* Ajuste para o tamanho da imagem */
+}
+
+.logo img {
+    width: 100px; /* Tamanho da logo */
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 100;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 3.5em; /* Um pouco maior */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: var(--color-white); /* Cor da linha do hambúrguer */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.5; /* Espessura da linha */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+/* Menu Navegação */
+.menu-aberto {
+    background-color: var(--color-black);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: 98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.5s cubic-bezier(0.7, 0, 0.3, 1); /* Transição mais fluida */
+    opacity: 0;
+}
+
+.menu-aberto.active {
+    height: 100vh;
+    opacity: 1;
+}
+
+.nav-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* Espaçamento entre os links */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.nav-menu a {
+    user-select: none;
+    text-decoration: none;
+    font-family: var(--font-display); /* Usar a fonte de display para os links do menu */
+    font-size: 3.5rem; /* Tamanho maior */
+    font-weight: 600; /* Semibold */
+    color: var(--color-light-gray); /* Cor mais suave */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: color var(--transition-speed), transform var(--transition-speed), opacity var(--transition-speed);
+}
+
+.menu-aberto.active .nav-menu a {
+    opacity: 1;
+    transform: translateY(0);
+    /* Adicionar um pequeno delay para cada link para um efeito cascata */
+    animation: fadeInSlideUp 0.6s forwards;
+}
+
+.menu-aberto.active .nav-menu a:nth-child(1) { animation-delay: 0.1s; }
+.menu-aberto.active .nav-menu a:nth-child(2) { animation-delay: 0.15s; }
+.menu-aberto.active .nav-menu a:nth-child(3) { animation-delay: 0.2s; }
+.menu-aberto.active .nav-menu a:nth-child(4) { animation-delay: 0.25s; }
+.menu-aberto.active .nav-menu a:nth-child(5) { animation-delay: 0.3s; }
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-menu a:hover {
+    color: var(--color-accent-primary);
+    transform: translateY(-5px); /* Pequeno movimento no hover */
+}
+
+/*************** INICIO *****/
+.inicio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2rem; /* Ajuste de padding */
+    z-index: 1;
+    user-select: none;
+}
+
+.container-inicio {
+    width: 100%;
+    height: 100%;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-inicio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.titulo-inicio {
+    font-size: clamp(2.5rem, 6vw + 1rem, 6rem); /* Título maior e mais responsivo */
+    font-weight: 300; /* Light */
+    line-height: 1.1;
+}
+
+.destaque-inicio {
+    font-weight: 700; /* Bold para o nome */
+    color: var(--color-accent-primary); /* Cor de destaque */
+}
+
+.paragrafo-inicio p {
+    font-size: clamp(1.1rem, 1.8vw + 0.5rem, 1.8rem); /* Parágrafo mais legível */
+    max-width: 800px; /* Largura máxima para legibilidade */
+    color: var(--color-light-gray); /* Cor mais suave */
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* Botão Inicio CTA */
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 15px 25px; /* Padding maior */
+    margin-top: 2.5rem; /* Mais espaço acima */
+    transition: all var(--transition-speed);
+    border: none;
+    background-color: var(--color-accent-secondary); /* Cor de destaque 2 */
+    cursor: pointer;
+    border-radius: var(--border-radius-large);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta span {
+    position: relative;
+    font-family: var(--font-body);
+    font-size: 1.1rem; /* Tamanho da fonte do botão */
+    font-weight: 700;
+    letter-spacing: 0.08em; /* Mais espaçamento entre letras */
+    color: var(--color-white);
+}
+
+.cta:before {
+    display: none; /* Remover o círculo inicial */
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 12px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--color-white); /* Cor da seta */
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all var(--transition-speed);
+}
+
+.cta:hover {
+    background-color: var(--color-accent-primary); /* Mudar para a cor primária no hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta:hover span {
+    color: var(--color-black); /* Mudar cor do texto no hover */
+}
+
+.cta:hover svg {
+    transform: translateX(5px); /* Mover a seta um pouco mais */
+    stroke: var(--color-black); /* Mudar cor da seta no hover */
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+.complemento-inicio {
+    position: absolute;
+    bottom: 2rem;
+    width: 100vw;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.complemento-inicio .text {
+    width: 180px; /* Ajuste de tamanho */
+    opacity: 0.15; /* Mais sutil */
+}
+
+.complemento-inicio .qr-code {
+    width: 70px; /* Ajuste de tamanho */
+    opacity: 0.15; /* Mais sutil */
+    transition: all .5s ease-in-out;
+}
+
+.qr-code:hover {
+    opacity: 0.8; /* Mais visível no hover */
+}
+
+/*************** SOBRE *****/
+.sobre {
+    background-color: var(--color-black);
+    width: 100%;
+    height: auto; /* Permitir que a altura se ajuste ao conteúdo */
+    min-height: 100vh; /* Garantir que ocupe pelo menos a altura da tela */
+    display: block; /* Remover flex para melhor controle do layout */
+    padding: 4rem 2rem; /* Ajuste de padding */
+    z-index: 1;
+    user-select: none;
+    overflow: visible;
+    position: relative; /* Para posicionar o headline-sobre */
+}
+
+.container-sobre {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15vh; /* Espaço para o headline */
+    padding-bottom: 5vh;
+}
+
+.headline-sobre {
+    position: absolute; /* Posicionar absolutamente */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh; /* Altura menor para o headline */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black); /* Fundo para o headline */
+    z-index: 10; /* Acima do conteúdo */
+}
+
+.headline-scroll {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.headline-scroll span {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw + 1rem, 8rem); /* Tamanho maior e mais responsivo */
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem; /* Espaçamento entre as palavras */
+}
+
+.headline-scroll .divisor {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-medium-gray);
+    border-radius: 50%;
+    margin: 0 1.5rem;
+}
+
+.headline-scroll .bold {
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.headline-scroll .light {
+    font-weight: 300;
+    color: var(--color-medium-gray);
+}
+
+.conteudo-sobre {
+    position: relative;
+    width: 100%;
+    height: auto; /* Ajustar altura */
+    display: flex;
+    flex-direction: row; /* Manter em linha para desktop */
+    gap: 4rem; /* Espaçamento entre as colunas */
+    padding-top: 2rem; /* Espaço abaixo do headline */
+}
+
+.left-sobre {
+    color: var(--color-white);
+    height: auto;
+    width: 55%; /* Ajuste de largura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinhar à esquerda */
+    gap: 2.5rem;
+}
+
+.textos-sobre h1 {
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.textos-sobre p {
+    font-size: clamp(1rem, 1.5vw + 0.2rem, 1.3rem);
+    color: var(--color-light-gray);
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+.redes-sociais {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--color-light-gray);
+    font-size: 1.1rem;
+    width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed);
+}
+
+.redes-sociais a:hover {
+    color: var(--color-accent-primary);
+    padding-left: 10px; /* Pequeno movimento no hover */
+    border-color: var(--color-accent-primary);
+}
+
+.redes-sociais a i {
+    transition: transform var(--transition-speed);
+}
+
+.redes-sociais a:hover i {
+    transform: translateX(5px);
+}
+
+.right-sobre {
+    height: auto; /* Ajuste para auto */
+    width: 45%; /* Manter para desktop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Manter relative para posicionar o complemento */
+}
+
+.imagem-sobre {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    position: relative; /* Manter relative */
+    width: 100%;
+    height: auto;
+    z-index: 99;
+}
+
+.imagem-sobre img {
+    width: 90%; /* Ajuste de tamanho */
+    max-width: 450px; /* Limite máximo */
+    border-radius: var(--border-radius-medium); /* Borda arredondada na imagem */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    z-index: 99;
+    display: block; /* Garante que a imagem se comporte como um bloco */
+    margin: 0 auto; /* Centraliza a imagem dentro do seu contêiner */
+}
+
+.complemento-sobre {
+    position: absolute; /* Manter absoluto para o texto giratório */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralizar */
+    width: 120%; /* Cobrir mais área */
+    height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0; /* Atrás da imagem */
+}
+
+.complemento-sobre img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajustar para caber */
+    opacity: 0.1; /* Mais sutil */
+    animation: rotate 30s linear infinite; /* Animação mais lenta */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*************** SKILLS *****/
+.skills {
+    width: 100%;
+    padding: 7rem 2rem; /* Ajuste de padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark-gray); /* Fundo cinza escuro */
+}
+
+.container-skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headline-skills {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem; /* Mais espaço abaixo do título */
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-headline-skills h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.text-headline-skills p {
+    font-size: clamp(1rem, 1.5vw + 0.2rem, 1.3rem);
+    color: var(--color-light-gray);
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto; /* Centralizar parágrafo */
+}
+
+.conteudo-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mais flexível */
+    gap: 1.5rem; /* Espaçamento entre as caixas */
+    width: 100%;
+}
+
+.box-skills {
+    background-color: var(--color-black); /* Fundo preto para as caixas */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda mais sutil */
+    border-radius: var(--border-radius-medium); /* Borda arredondada */
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhar conteúdo ao topo */
+    height: auto; /* Altura automática */
+    min-height: 280px; /* Altura mínima para consistência */
+    padding: 2.5rem; /* Mais padding */
+    gap: 1rem;
+    text-align: left; /* Alinhar texto à esquerda */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.box-skills:hover {
+    transform: translateY(-8px); /* Pequeno levantamento no hover */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4); /* Sombra mais forte no hover */
+}
+
+.box-skills i {
+    font-size: 3.5rem; /* Ícone um pouco menor */
+    color: var(--color-accent-primary); /* Cor de destaque para os ícones */
+    margin-bottom: 0.5rem;
+}
+
+.box-skills h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.box-skills p {
+    color: var(--color-light-gray);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/*************** SERVIÇOS *****/
+.servicos {
+    background-color: var(--color-white);
+    width: 100vw;
+    height: auto; /* Ajustar altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 2rem; /* Ajuste de padding */
+}
+
+.container-servicos {
+    background-color: transparent; /* Remover fundo branco extra */
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headline-servicos {
+    width: 100%;
+    height: auto; /* Ajustar altura */
+    display: flex;
+    align-items: flex-end; /* Alinhar ao final */
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.titulo-servicos {
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.titulo-servicos h1 {
+    color: var(--color-black);
+    width: auto;
+    font-size: clamp(3rem, 8vw + 1rem, 8rem);
+    font-weight: 700;
+    font-family: var(--font-display);
+    line-height: 1;
+}
+
+.descricao-servicos {
+    width: 45%; /* Ajuste de largura */
+    font-size: clamp(1rem, 1.5vw + 0.2rem, 1.3rem);
+    text-align: right;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: var(--color-medium-gray);
+}
+
+.servicos-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem; /* Espaçamento entre os cards */
+    padding: 0; /* Remover padding extra */
+}
+
+.card-servicos, .card-servicos-left {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais sutil */
+    max-width: 100%; /* Ajustar para 100% */
+    min-height: 120px; /* Altura mínima */
+    border-radius: var(--border-radius-large); /* Borda mais arredondada */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 2.5rem; /* Ajuste de padding */
+    background-color: var(--color-white);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card-servicos:hover, .card-servicos-left:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-servicos-left {
+    margin-left: 0; /* Remover margin-left fixo */
+    /* Usar flexbox para alinhar os itens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%; /* Ajuste de gap */
+}
+
+.card-titulo {
+    width: 70%; /* Ajuste de largura */
+    font-size: clamp(1.2rem, 2.5vw + 0.5rem, 2rem);
+    font-family: var(--font-display); /* Usar fonte de display */
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.card-icon {
+    width: 100px; /* Tamanho fixo */
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: var(--border-radius-large);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.card-icon i {
+    font-size: 1.8rem;
+    color: var(--color-medium-gray);
+    margin-bottom: 0; /* Remover margin-bottom */
+}
+
+/*************** ALGUMA FRASE AQUI  *****/
+.free-your-mind {
+    background-color: var(--color-white);
+    width: 100vw;
+    height: auto; /* Ajustar altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem; /* Ajuste de padding */
+    font-family: var(--font-display);
+}
+
+.container-free-your-mind {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem; /* Espaçamento entre as linhas */
+}
+
+.line-container.center {
+    justify-content: center;
+}
+
+.line-container.right {
+    justify-content: flex-end;
+}
+
+.container-free-your-mind span {
+    color: var(--color-black);
+    font-size: clamp(3rem, 10vw + 1rem, 12rem); /* Tamanho maior e mais responsivo */
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.center span {
+    text-align: center;
+}
+
+.right span {
+    text-align: right;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-light-gray); /* Cor da linha */
+    margin: 0 2rem; /* Espaçamento menor */
+}
+
+/*************** PORTFOLIO *****/
+.portfolio {
+    width: 100%;
+    height: auto; /* Ajustar altura */
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 2rem; /* Ajuste de padding */
+    background-color: var(--color-black);
+}
+
+.container-portfolio {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headline-portfolio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.headline-portfolio h2 {
+    width: 50%;
+    font-size: clamp(3rem, 8vw + 1rem, 8rem);
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--color-white);
+    line-height: 1;
+}
+
+.headline-portfolio .descricao {
+    width: 45%;
+    font-size: clamp(1rem, 1.5vw + 0.2rem, 1.3rem);
+    text-align: right;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: var(--color-light-gray);
+}
+
+/* NOVO BLOCO: estilo para os projetos em forma de grid */
+.projetos-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards maiores */
+    gap: 2.5rem; /* Mais espaçamento */
+    width: 100%;
+    padding: 0; /* Remover padding extra */
+    box-sizing: border-box;
+}
+
+.projeto {
+    background-color: var(--color-dark-gray); /* Fundo mais escuro */
+    border-radius: var(--border-radius-medium);
+    padding: 1.5rem; /* Mais padding */
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex; /* Usar flexbox para organizar o conteúdo */
+    flex-direction: column;
+    justify-content: space-between; /* Espaço entre imagem e texto/botão */
+}
+
+.projeto:hover {
+    transform: translateY(-10px); /* Levantamento maior no hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.projeto img {
+    width: 100%;
+    height: 200px; /* Altura maior para a imagem */
+    object-fit: cover;
+    border-radius: var(--border-radius-small);
+    margin-bottom: 1.5rem;
+}
+
+.projeto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+.projeto p {
+    font-size: 0.95rem;
+    color: var(--color-light-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
+}
+
+.projeto a {
+    display: inline-block;
+    background-color: var(--color-link); /* Cor azul para o link */
+    color: var(--color-white);
+    padding: 0.8rem 1.5rem; /* Padding maior */
+    border-radius: var(--border-radius-large); /* Mais arredondado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    align-self: center; /* Centralizar o botão */
+}
+
+.projeto a:hover {
+    background-color: var(--color-link-hover);
+    transform: translateY(-3px); /* Pequeno levantamento no hover */
+}
+
+/* Os estilos abaixo podem ser mantidos, caso usados em outras seções */
+/* Removido estilos de .container-case, .case1, .case2, etc. para simplificar */
+/* Se você ainda usa o slide de imagens, mantenha os estilos relevantes */
+
+/*************** CONTATO *****/
+.contato {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    padding: 7rem 2rem; /* Ajuste de padding */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+}
+
+.container-contato {
+    width: 100%;
+    height: auto; /* Ajustar altura */
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.container-contato h2 { /* Título da seção Contato */
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw + 1rem, 8rem);
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.container-contato > p { /* Parágrafo abaixo do título */
+    font-size: clamp(1rem, 1.5vw + 0.2rem, 1.3rem);
+    color: var(--color-medium-gray);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.conteudo-contato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinhar ao topo */
+    gap: 4rem;
+}
+
+.formulario-contato {
+    width: 55%; /* Ajuste de largura */
+    height: auto; /* Ajustar altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0; /* Remover padding extra */
+}
+
+.formulario-contato h2 { /* Remover este h2 se o título principal já for suficiente */
+    display: none; /* Ou estilize se for um subtítulo */
+}
+
+.formulario-contato p { /* Remover este p se o parágrafo principal já for suficiente */
+    display: none; /* Ou estilize se for um subtítulo */
+}
+
+.form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form input,
+.form textarea {
+    font-family: var(--font-body);
+    width: 100%;
+    height: 50px; /* Altura fixa para inputs */
+    border-radius: var(--border-radius-medium); /* Mais arredondado */
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Borda mais suave */
+    padding: 1rem 1.2rem; /* Ajuste de padding */
+    font-size: 1rem;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--color-accent-primary); /* Borda de destaque no foco */
+    box-shadow: 0 0 0 3px rgba(231, 252, 0, 0.2); /* Sombra suave no foco */
+}
+
+.form textarea {
+    height: auto; /* Altura automática para textarea */
+    min-height: 150px; /* Altura mínima para textarea */
+    resize: vertical; /* Permitir redimensionamento vertical */
+}
+
+.form .btn {
+    background-color: var(--color-accent-primary);
+    color: var(--color-black);
+    font-weight: bold;
+    width: 200px; /* Largura fixa */
+    padding: 1rem 0rem;
+    border: none; /* Remover borda */
+    outline: none;
+    border-radius: var(--border-radius-large);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    margin-top: 1rem;
+}
+
+.form .btn:hover {
+    background-color: #d4e600; /* Tom ligeiramente mais escuro no hover */
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-contato {
+    width: 40%; /* Ajuste de largura */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhar ao topo */
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.info-contato p {
+    font-size: 1.1rem;
+    color: var(--color-black);
+    line-height: 1.5;
+}
+
+.info-contato p strong {
+    color: var(--color-dark-gray);
+}
+
+.info-contato a {
+    text-decoration: none;
+    color: var(--color-link);
+    transition: color var(--transition-speed);
+}
+
+.info-contato a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+.logo-contato {
+    width: 100%; /* Ocupar a largura total disponível */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centralizar imagem */
+    margin-top: 2rem; /* Espaço acima da imagem */
+}
+
+.logo-contato img {
+    width: 80%; /* Ajuste de tamanho */
+    max-width: 350px; /* Limite máximo */
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*************** FOOTER *****/
+.footer {
+    background-color: var(--color-dark-gray); /* Fundo cinza escuro */
+    width: 100%;
+    padding: 3rem 2rem; /* Ajuste de padding */
+    color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container-footer {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhar à esquerda por padrão */
+    gap: 1rem;
+}
+
+.footer-column h4 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.logo-column {
+    align-items: flex-start;
+}
+
+.logo-column img {
+    width: 80px; /* Logo menor */
+    filter: brightness(0) invert(1); /* Deixar a logo branca */
+}
+
+.menu-column {
+    text-align: left; /* Alinhar à esquerda */
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-light-gray);
+    font-size: 1rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-nav a:hover {
+    color: var(--color-accent-primary);
+}
+
+.social-column {
+    text-align: right; /* Manter alinhado à direita */
+    align-items: flex-end; /* Alinhar itens à direita */
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinhar links à direita */
+    gap: 0.8rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--color-light-gray);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: color var(--transition-speed);
+}
+
+.social-links a i {
+    margin-right: 0.6rem;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    color: var(--color-accent-primary);
+}
+
+.credits-column {
+    width: 100%;
+    text-align: center; /* Centralizar créditos finais */
+    margin-top: 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Linha divisória */
+}
+
+.credits-column p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--color-medium-gray);
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Pedro Rodrigues - Desenvolvedor Front-end</title>
+    <meta name="description" content="Portfólio de João Pedro Rodrigues, Desenvolvedor Front-end apaixonado por criar soluções web inovadoras com HTML, CSS, JavaScript e mais.">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsividade.css">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Preload Fonts (Opcional, para otimização de carregamento) -->
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+
+<body>
+
+    <!--Botão voltar ao topo-->
+    <div id="backToTop" class="fixed-button">
+        <i class="bi bi-chevron-up"></i>
+    </div>
+
+    <!--Botão WhatsApp-->
+    <div id="whatsappButton" class="fixed-button">
+        <a href="https://wa.me/qr/N5XM5WOJVIUMO1" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <!--Container Geral-->
+    <div class="container">
+
+        <!--Header-->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/img/jpr.png" alt="Logo João Pedro Rodrigues">
+            </div>
+            <div class="menu">
+                <label class="hamburger">
+                    <input type="checkbox" id="menuToggle">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="menu-aberto">
+                <nav class="nav-menu">
+                    <a href="#inicio">INÍCIO</a>
+                    <a href="#sobre">SOBRE</a>
+                    <a href="#skills">SKILLS</a>
+                    <a href="#portfolio">PORTFÓLIO</a>
+                    <a href="#contato">CONTATO</a>
+                </nav>
+            </div>
+        </header>
+        <!--Fim Header-->
+
+        <!--Início-->
+        <main id="inicio" class="inicio">
+            <div class="container-inicio">
+                <div class="conteudo-inicio" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="titulo-inicio">
+                        <h1>Olá, eu sou</h1>
+                        <h1 class="destaque-inicio">João Pedro Rodrigues</h1>
+                    </div>
+                    <div class="paragrafo-inicio" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        <p>Desenvolvedor Web apaixonado por tecnologia e inovação. Transformo ideias em soluções digitais.</p>
+                    </div>
+                    <button class="cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" onclick="location.href='#contato'">
+                        <span>Fale Comigo</span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <div class="complemento-inicio">
+                    <img class="text" src="assets/img/complemento.png" alt="Decorativo">
+                    <img class="qr-code" src="assets/img/qr_code_rmdeveloper.png" alt="qr code para seu link bio">
+                </div>
+            </div>
+        </main>
+        <!--Fim Início-->
+
+        <!--Sobre-->
+        <section id="sobre" class="sobre">
+            <div class="container-sobre">
+                <!--Slide Sobre-->
+                <div class="headline-sobre" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="headline-scroll" id="headline-scroll">
+                        <span class="bold">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="light">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="bold">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="light">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="bold">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="light">SOBRE</span>
+                        <span class="divisor"></span>
+                    </div>
+                </div>
+                <div class="conteudo-sobre">
+                    <div class="left-sobre" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="textos-sobre">
+                            <h1>Olá, me chamo João Pedro Rodrigues</h1>
+                            <p>Atuo na área de Análise e Desenvolvimento de Sistemas com foco em front-end, utilizando HTML, CSS, JavaScript e ferramentas de desenvolvimento web. Tenho conhecimentos em Git, GitHub, bancos de dados, Java e Excel avançado. Sou dedicado, curioso e comprometido em aprimorar minhas habilidades para contribuir cada vez mais com projetos tecnológicos.
+                            </p>
+                        </div>
+                        <div class="redes-sociais">
+                            <a href="https://www.instagram.com/j.pedrox7__/" target="_blank" rel="noopener noreferrer">INSTAGRAM<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://github.com/JoaoPedroRodrigues7" target="_blank" rel="noopener noreferrer">GITHUB<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/matias.riquelme.7906/?_rdr" target="_blank" rel="noopener noreferrer">FACEBOOK<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rodrigues-599a81352/" target="_blank" rel="noopener noreferrer">LINKEDIN<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="right-sobre" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="imagem-sobre">
+                            <img src="assets/img/Adobe Express - file.png" alt="Foto João Pedro Rodrigues">
+                        </div>
+                        <div class="complemento-sobre">
+                            <img src="assets/img/txt gira.png" alt="Texto giratório decorativo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Sobre-->
+
+        <!--Skills-->
+        <section id="skills" class="skills">
+            <div class="container-skills" data-aos="fade-up" data-aos-duration="1000">
+                <div class="headline-skills">
+                    <div class="text-headline-skills" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        <h2>Minhas Skills</h2>
+                        <p>Tenho conhecimentos em diversas tecnologias e ferramentas para desenvolvimento web e sistemas.</p>
+                    </div>
+                </div>
+                <div class="conteudo-skills">
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>HTML & CSS</h3>
+                        <p>Desenvolvimento de layouts responsivos e estilizados com padrões modernos.</p>
+                    </div>
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <i class="bi bi-file-code"></i>
+                        <h3>JavaScript</h3>
+                        <p>Programação dinâmica para criar interatividade e melhorar a experiência do usuário.</p>
+                    </div>
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                        <i class="bi bi-git"></i>
+                        <h3>Git & GitHub</h3>
+                        <p>Controle de versão e colaboração em projetos de software.</p>
+                    </div>
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                        <i class="bi bi-database"></i>
+                        <h3>Banco de Dados</h3>
+                        <p>Conhecimento básico em modelagem e manipulação de dados.</p>
+                    </div>
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                        <i class="bi bi-file-earmark-code"></i>
+                        <h3>Java</h3>
+                        <p>Programação orientada a objetos e desenvolvimento de aplicações básicas.</p>
+                    </div>
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <i class="bi bi-file-excel"></i>
+                        <h3>Excel Avançado</h3>
+                        <p>Manipulação de dados e criação de planilhas para análise e organização.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Skills-->
+
+        <!--Serviços-->
+        <section id="servicos" class="servicos">
+            <div class="container-servicos">
+                <div class="headline-servicos">
+                    <div class="titulo-servicos">
+                        <h1>Serviços</h1>
+                    </div>
+                    <div class="descricao-servicos">
+                        <p>Ofereço uma gama completa de serviços de desenvolvimento web para transformar suas ideias em realidade digital.</p>
+                    </div>
+                </div>
+                <div class="servicos-cards">
+                    <div class="card-servicos">
+                        <h3 class="card-titulo">Desenvolvimento Front-end Personalizado</h3>
+                        <div class="card-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                    </div>
+                    <div class="card-servicos-left">
+                        <h3 class="card-titulo">Criação de Sites Responsivos</h3>
+                        <div class="card-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                    </div>
+                    <div class="card-servicos">
+                        <h3 class="card-titulo">Otimização de Performance Web</h3>
+                        <div class="card-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                    </div>
+                    <div class="card-servicos-left">
+                        <h3 class="card-titulo">Manutenção e Suporte Técnico</h3>
+                        <div class="card-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Serviços-->
+
+        <!--Frase de Impacto-->
+        <section class="free-your-mind">
+            <div class="container-free-your-mind">
+                <div class="line-container">
+                    <span>CRIATIVIDADE</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line-container center">
+                    <div class="line"></div>
+                    <span>E INOVAÇÃO</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line-container right">
+                    <div class="line"></div>
+                    <span>PARA SEU PROJETO</span>
+                </div>
+            </div>
+        </section>
+        <!--Fim Frase de Impacto-->
+
+        <!--Portfolio-->
+        <section id="portfolio" class="portfolio">
+            <div class="container-portfolio" data-aos="fade-up" data-aos-duration="1000">
+                <div class="headline-portfolio">
+                    <h2>Meus Projetos</h2>
+                    <p class="descricao">Explore alguns dos meus trabalhos mais recentes, onde transformo ideias em experiências digitais funcionais e visualmente atraentes.</p>
+                </div>
+                <div class="projetos-portfolio">
+                    <!-- Projeto 1 -->
+                    <div class="projeto">
+                        <img src="assets/img/Captura de tela 2025-05-30 151028.png" alt="Projeto Android UI">
+                        <h3>Android UI Clone</h3>
+                        <p>Recriação de uma interface de usuário do Android, focando na fidelidade visual e responsividade.</p>
+                        <a href="https://joaopedrorodrigues7.github.io/android/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div class="projeto">
+                        <img src="assets/img/projeto.png" alt="Projeto Abstract Design">
+                        <h3>Abstract Landing Page</h3>
+                        <p>Desenvolvimento de uma landing page com design abstrato, explorando animações e interatividade.</p>
+                        <a href="https://joaopedrorodrigues7.github.io/Abstract/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+                    </div>
+                    <!-- Projeto 3 -->
+                    <div class="projeto">
+                        <img src="assets/img/projeto3.png" alt="Projeto Portfólio Antigo">
+                        <h3>Portfólio Pessoal (Versão Anterior)</h3>
+                        <p>Uma versão anterior do meu portfólio, demonstrando a evolução das minhas habilidades de design e desenvolvimento.</p>
+                        <a href="https://joaopedrorodrigues7.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+                    </div>
+                    <!-- Exemplo de um novo projeto (adicione mais conforme necessário) -->
+                    <div class="projeto">
+                        <img src="assets/img/placeholder.png" alt="Projeto E-commerce Simples"> <!-- Substitua por uma imagem real -->
+                        <h3>E-commerce Simples</h3>
+                        <p>Um protótipo de loja virtual com funcionalidades básicas de carrinho e listagem de produtos.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a> <!-- Substitua pelo link real -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Portfolio-->
+
+        <!--Contato-->
+        <section id="contato" class="contato">
+            <div class="container-contato" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Contato</h2>
+                <p>Quer entrar em contato? Preencha o formulário ou envie uma mensagem pelo WhatsApp. Estou ansioso para discutir seu próximo projeto!</p>
+
+                <div class="conteudo-contato">
+                    <div class="formulario-contato">
+                        <form action="#" method="POST" class="form">
+                            <input type="text" name="nome" placeholder="Seu nome" required>
+                            <input type="email" name="email" placeholder="Seu email" required>
+                            <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+
+                    <div class="info-contato">
+                        <p><strong>Email:</strong> <a href="mailto:jprodridues2613@gmail.com">jprodridues2613@gmail.com</a></p>
+                        <p><strong>Telefone:</strong> <a href="tel:+5588988796132">(88) 98879-6132</a></p>
+                        <p><strong>Localização:</strong> Arneiroz, Ceará - Brasil</p>
+                        <div class="logo-contato">
+                            <img src="assets/img/jpr.png" alt="Logo João Pedro Rodrigues"> <!-- Usar a logo aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Contato-->
+
+        <!--Footer-->
+        <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container-footer">
+                <div class="footer-column logo-column">
+                    <img src="assets/img/jpr.png" alt="Logo João Pedro Rodrigues">
+                </div>
+                <div class="footer-column menu-column">
+                    <h4>Navegação</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column social-column">
+                    <h4>Conecte-se</h4>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/j.pedrox7__/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i> Instagram</a></li>
+                        <li><a href="https://github.com/JoaoPedroRodrigues7" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a></li>
+                        <li><a href="https://www.facebook.com/matias.riquelme.7906/?_rdr" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rodrigues-599a81352/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="credits-column">
+                <p>&copy; 2025 João Pedro Rodrigues. Todos os direitos reservados.</p>
+                <p>Desenvolvido com paixão por João Pedro Rodrigues.</p>
+            </div>
+        </footer>
+
+    </div>
+    <!--Fim Container Geral-->
+
+    <!--AOS Script-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Duração padrão das animações
+            once: true,     // Animar apenas uma vez ao rolar
+        });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/actionButton.js"></script>
+    <script src="assets/js/header.js"></script> <!-- Mantenha este script para o menu -->
+    <script src="assets/js/slideSobre.js"></script> <!-- Mantenha este script para o texto giratório -->
+
+</body>
+
+</html>

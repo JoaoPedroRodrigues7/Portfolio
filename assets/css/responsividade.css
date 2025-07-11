@@ -1,0 +1,596 @@
+/* Responsividade para iPad (tablet) e telas menores */
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 0;
+    }
+
+    /* Header */
+    .header {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .hamburger svg {
+        height: 3em;
+    }
+
+    .nav-menu a {
+        font-size: 2.5rem;
+    }
+
+    /************************** INICIO ***/
+    .inicio {
+        padding: 0 1.5rem;
+    }
+
+    .titulo-inicio {
+        font-size: clamp(2rem, 5vw + 0.8rem, 4rem);
+    }
+
+    .paragrafo-inicio p {
+        font-size: clamp(1rem, 1.5vw + 0.2rem, 1.5rem);
+    }
+
+    .cta {
+        padding: 12px 20px;
+    }
+
+    .cta span {
+        font-size: 1rem;
+    }
+
+    .complemento-inicio {
+        padding: 0 1.5rem;
+    }
+
+    .complemento-inicio .text {
+        width: 150px;
+    }
+
+    .complemento-inicio .qr-code {
+        width: 60px;
+    }
+
+    /************************** SOBRE ***/
+    .sobre {
+        height: auto;
+        padding: 3rem 1.5rem;
+    }
+
+    .container-sobre {
+        padding-top: 10vh; /* Ajuste para o headline menor */
+        height: auto;
+    }
+
+    .headline-sobre {
+        height: 10vh; /* Altura menor para o headline */
+    }
+
+    .headline-scroll span {
+        font-size: clamp(2.5rem, 6vw + 0.5rem, 6rem);
+        padding: 0 1rem;
+    }
+
+    .headline-scroll .divisor {
+        width: 12px;
+        height: 12px;
+        margin: 0 1rem;
+    }
+
+    .conteudo-sobre {
+        flex-direction: column-reverse; /* Inverter ordem para mobile */
+        height: auto;
+        gap: 3rem;
+        align-items: center; /* Centraliza os itens flex na coluna */
+    }
+
+    .left-sobre {
+        width: 100%;
+        height: auto;
+        align-items: center; /* Centralizar texto */
+        text-align: center;
+    }
+
+    .textos-sobre h1 {
+        font-size: clamp(1.8rem, 3.5vw + 0.5rem, 3rem);
+    }
+
+    .textos-sobre p {
+        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+    }
+
+    .redes-sociais {
+        align-items: center; /* Centralizar links de redes sociais */
+    }
+
+    .redes-sociais a {
+        width: 80%; /* Limitar largura para centralizar */
+        max-width: 300px;
+    }
+
+    .right-sobre {
+        width: 100%; /* Ocupa a largura total disponível */
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centraliza o conteúdo da direita */
+        position: relative; /* Garante que o complemento possa ser posicionado em relação a ele */
+    }
+
+    .imagem-sobre {
+        width: 100%; /* Ocupa a largura total do right-sobre */
+        height: auto;
+        justify-content: center; /* Centraliza a imagem dentro do imagem-sobre */
+        align-items: center;
+        position: relative; /* Manter relative */
+    }
+
+    .imagem-sobre img {
+        width: 80%; /* Ajuste de tamanho para a imagem principal */
+        max-width: 350px; /* Limite máximo */
+        display: block; /* Garante que a imagem se comporte como um bloco */
+        margin: 0 auto; /* Centraliza a imagem dentro do seu contêiner */
+    }
+
+    .complemento-sobre {
+        position: absolute; /* Manter absoluto */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centralizar */
+        width: 100%; /* Ajuste para o tamanho do right-sobre */
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    .complemento-sobre img {
+        width: 60%; /* Ajuste de tamanho para o texto giratório */
+        max-width: 250px;
+    }
+
+    /************************** SKILLS ***/
+    .skills {
+        padding: 5rem 1.5rem;
+    }
+
+    .text-headline-skills h2 {
+        font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+    }
+
+    .text-headline-skills p {
+        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+    }
+
+    .conteudo-skills {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .box-skills {
+        padding: 1.5rem;
+        min-height: 250px;
+    }
+
+    .box-skills i {
+        font-size: 3rem;
+    }
+
+    .box-skills h3 {
+        font-size: 1.4rem;
+    }
+
+    .box-skills p {
+        font-size: 0.9rem;
+    }
+
+    /************************** SERVIÇOS ***/
+    .servicos {
+        padding: 5rem 1.5rem;
+    }
+
+    .headline-servicos {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .titulo-servicos {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .titulo-servicos h1 {
+        font-size: clamp(3rem, 8vw + 1rem, 6rem);
+    }
+
+    .descricao-servicos {
+        width: 100%;
+        text-align: left;
+        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+    }
+
+    .servicos-cards {
+        gap: 1rem;
+    }
+
+    .card-servicos, .card-servicos-left {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        min-height: auto;
+        border-radius: var(--border-radius-medium);
+    }
+
+    .card-titulo {
+        width: 100%;
+        font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
+        margin-bottom: 1rem;
+    }
+
+    .card-icon {
+        width: 80px;
+        height: 40px;
+        border-radius: var(--border-radius-large);
+    }
+
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+
+    /************************** FRASE DE IMPACTO ***/
+    .free-your-mind {
+        padding: 3rem 1.5rem;
+    }
+
+    .container-free-your-mind span {
+        font-size: clamp(2rem, 8vw + 0.5rem, 8rem);
+    }
+
+    .line {
+        margin: 0 1rem;
+    }
+
+    /************************** PORTFOLIO ***/
+    .portfolio {
+        padding: 5rem 1.5rem;
+    }
+
+    .headline-portfolio {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .headline-portfolio h2 {
+        width: 100%;
+        font-size: clamp(3rem, 8vw + 1rem, 6rem);
+        margin-bottom: 1rem;
+    }
+
+    .headline-portfolio .descricao {
+        width: 100%;
+        text-align: left;
+        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+    }
+
+    .projetos-portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .projeto {
+        padding: 1rem;
+    }
+
+    .projeto img {
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .projeto h3 {
+        font-size: 1.2rem;
+    }
+
+    .projeto p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .projeto a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /************************** CONTATO ***/
+    .contato {
+        padding: 5rem 1.5rem;
+        height: auto;
+    }
+
+    .container-contato {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .container-contato h2 {
+        font-size: clamp(3rem, 8vw + 1rem, 6rem);
+    }
+
+    .container-contato > p {
+        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+        margin-bottom: 2rem;
+    }
+
+    .conteudo-contato {
+        flex-direction: column-reverse; /* Inverter ordem para mobile */
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .formulario-contato {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form input,
+    .form textarea {
+        height: 45px;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .form textarea {
+        min-height: 120px;
+    }
+
+    .form .btn {
+        width: 180px;
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+    }
+
+    .info-contato {
+        width: 100%;
+        padding-top: 0;
+        text-align: center; /* Centralizar informações de contato */
+        align-items: center;
+    }
+
+    .info-contato p {
+        font-size: 1rem;
+    }
+
+    .info-contato a {
+        font-size: 1rem;
+    }
+
+    .logo-contato {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .logo-contato img {
+        width: 70%;
+        max-width: 300px;
+    }
+
+    /************************** FOOTER ***/
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-column {
+        width: 100%;
+        align-items: center; /* Centralizar colunas no mobile */
+        text-align: center;
+    }
+
+    .logo-column img {
+        width: 60px;
+    }
+
+    .footer-nav, .social-links {
+        align-items: center; /* Centralizar listas */
+    }
+
+    .social-links a {
+        flex-direction: row; /* Manter ícone e texto na mesma linha */
+        justify-content: center;
+    }
+
+    .credits-column {
+        padding-top: 1rem;
+    }
+
+    .credits-column p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsividade para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .hamburger svg {
+        height: 2.5em;
+    }
+
+    .nav-menu a {
+        font-size: 2rem;
+    }
+
+    .fixed-button {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .fixed-button i {
+        font-size: 22px;
+    }
+
+    .inicio, .sobre, .skills, .servicos, .free-your-mind, .portfolio, .contato {
+        padding: 4rem 1rem;
+    }
+
+    .titulo-inicio, .headline-portfolio h2, .titulo-servicos h1, .container-contato h2 {
+        font-size: clamp(2rem, 10vw + 0.5rem, 5rem);
+    }
+
+    .paragrafo-inicio p, .descricao-servicos, .headline-portfolio .descricao, .container-contato > p {
+        font-size: clamp(0.85rem, 1.5vw + 0.1rem, 1.1rem);
+    }
+
+    .cta {
+        padding: 10px 15px;
+    }
+
+    .cta span {
+        font-size: 0.9rem;
+    }
+
+    .complemento-inicio .text {
+        width: 120px;
+    }
+
+    .complemento-inicio .qr-code {
+        width: 50px;
+    }
+
+    .headline-scroll span {
+        font-size: clamp(1.8rem, 8vw + 0.2rem, 4rem);
+    }
+
+    .textos-sobre h1 {
+        font-size: clamp(1.5rem, 3vw + 0.2rem, 2.5rem);
+    }
+
+    .textos-sobre p {
+        font-size: clamp(0.8rem, 1.2vw + 0.1rem, 1.1rem);
+    }
+
+    .redes-sociais a {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .box-skills {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+    .box-skills i {
+        font-size: 2.5rem;
+    }
+
+    .box-skills h3 {
+        font-size: 1.2rem;
+    }
+
+    .box-skills p {
+        font-size: 0.8rem;
+    }
+
+    .card-titulo {
+        font-size: clamp(0.9rem, 1.8vw + 0.2rem, 1.3rem);
+    }
+
+    .card-icon {
+        width: 70px;
+        height: 35px;
+    }
+
+    .card-icon i {
+        font-size: 1.2rem;
+    }
+
+    .container-free-your-mind span {
+        font-size: clamp(1.5rem, 8vw + 0.2rem, 6rem);
+    }
+
+    .projetos-portfolio {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .projeto img {
+        height: 120px;
+    }
+
+    .projeto h3 {
+        font-size: 1.1rem;
+    }
+
+    .projeto p {
+        font-size: 0.75rem;
+    }
+
+    .projeto a {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .form input,
+    .form textarea {
+        height: 40px;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .form textarea {
+        min-height: 100px;
+    }
+
+    .form .btn {
+        width: 150px;
+        padding: 0.7rem 0;
+        font-size: 0.8rem;
+    }
+
+    .info-contato p {
+        font-size: 0.9rem;
+    }
+
+    .info-contato a {
+        font-size: 0.9rem;
+    }
+
+    .logo-contato img {
+        width: 60%;
+    }
+
+    .footer-column h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer-nav a, .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .social-links a i {
+        font-size: 1rem;
+    }
+}
