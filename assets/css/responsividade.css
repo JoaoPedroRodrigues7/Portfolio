@@ -2,7 +2,7 @@
 @media (max-width: 1024px) {
 
     .container {
-        padding: 0;
+        padding: 0 1.5rem; /* Adicionado padding horizontal ao container */
     }
 
     /* Header */
@@ -24,15 +24,15 @@
 
     /************************** INICIO ***/
     .inicio {
-        padding: 0 1.5rem;
+        padding: 0; /* Removido padding horizontal, o container já tem */
     }
 
     .titulo-inicio {
-        font-size: clamp(2rem, 5vw + 0.8rem, 4rem);
+        font-size: clamp(1.8rem, 5vw + 0.8rem, 4rem); /* Ajustado valor mínimo */
     }
 
     .paragrafo-inicio p {
-        font-size: clamp(1rem, 1.5vw + 0.2rem, 1.5rem);
+        font-size: clamp(0.9rem, 1.5vw + 0.2rem, 1.5rem); /* Ajustado valor mínimo */
     }
 
     .cta {
@@ -58,7 +58,7 @@
     /************************** SOBRE ***/
     .sobre {
         height: auto;
-        padding: 3rem 1.5rem;
+        padding: 3rem 0; /* Removido padding horizontal */
     }
 
     .container-sobre {
@@ -71,7 +71,7 @@
     }
 
     .headline-scroll span {
-        font-size: clamp(2.5rem, 6vw + 0.5rem, 6rem);
+        font-size: clamp(2rem, 6vw + 0.5rem, 6rem); /* Ajustado valor mínimo */
         padding: 0 1rem;
     }
 
@@ -96,11 +96,11 @@
     }
 
     .textos-sobre h1 {
-        font-size: clamp(1.8rem, 3.5vw + 0.5rem, 3rem);
+        font-size: clamp(1.6rem, 3.5vw + 0.5rem, 3rem); /* Ajustado valor mínimo */
     }
 
     .textos-sobre p {
-        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
     }
 
     .redes-sociais {
@@ -156,15 +156,15 @@
 
     /************************** SKILLS ***/
     .skills {
-        padding: 5rem 1.5rem;
+        padding: 5rem 0; /* Removido padding horizontal */
     }
 
     .text-headline-skills h2 {
-        font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+        font-size: clamp(1.8rem, 4vw + 0.5rem, 3.5rem); /* Ajustado valor mínimo */
     }
 
     .text-headline-skills p {
-        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
     }
 
     .conteudo-skills {
@@ -191,7 +191,7 @@
 
     /************************** SERVIÇOS ***/
     .servicos {
-        padding: 5rem 1.5rem;
+        padding: 5rem 0; /* Removido padding horizontal */
     }
 
     .headline-servicos {
@@ -208,13 +208,13 @@
     }
 
     .titulo-servicos h1 {
-        font-size: clamp(3rem, 8vw + 1rem, 6rem);
+        font-size: clamp(2.5rem, 8vw + 1rem, 6rem); /* Ajustado valor mínimo */
     }
 
     .descricao-servicos {
         width: 100%;
         text-align: left;
-        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
     }
 
     .servicos-cards {
@@ -231,7 +231,7 @@
 
     .card-titulo {
         width: 100%;
-        font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
+        font-size: clamp(0.9rem, 2vw + 0.3rem, 1.5rem); /* Ajustado valor mínimo */
         margin-bottom: 1rem;
     }
 
@@ -247,11 +247,11 @@
 
     /************************** FRASE DE IMPACTO ***/
     .free-your-mind {
-        padding: 3rem 1.5rem;
+        padding: 3rem 0; /* Removido padding horizontal */
     }
 
     .container-free-your-mind span {
-        font-size: clamp(2rem, 8vw + 0.5rem, 8rem);
+        font-size: clamp(1.8rem, 8vw + 0.5rem, 8rem); /* Ajustado valor mínimo */
     }
 
     .line {
@@ -260,7 +260,7 @@
 
     /************************** PORTFOLIO ***/
     .portfolio {
-        padding: 5rem 1.5rem;
+        padding: 5rem 0; /* Removido padding horizontal */
     }
 
     .headline-portfolio {
@@ -272,14 +272,14 @@
 
     .headline-portfolio h2 {
         width: 100%;
-        font-size: clamp(3rem, 8vw + 1rem, 6rem);
+        font-size: clamp(2.5rem, 8vw + 1rem, 6rem); /* Ajustado valor mínimo */
         margin-bottom: 1rem;
     }
 
     .headline-portfolio .descricao {
         width: 100%;
         text-align: left;
-        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
     }
 
     .projetos-portfolio {
@@ -312,7 +312,7 @@
 
     /************************** CONTATO ***/
     .contato {
-        padding: 5rem 1.5rem;
+        padding: 5rem 0; /* Removido padding horizontal */
         height: auto;
     }
 
@@ -322,11 +322,11 @@
     }
 
     .container-contato h2 {
-        font-size: clamp(3rem, 8vw + 1rem, 6rem);
+        font-size: clamp(2.5rem, 8vw + 1rem, 6rem); /* Ajustado valor mínimo */
     }
 
     .container-contato > p {
-        font-size: clamp(0.9rem, 1.2vw + 0.2rem, 1.2rem);
+        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
         margin-bottom: 2rem;
     }
 
@@ -385,7 +385,7 @@
 
     /************************** FOOTER ***/
     .footer {
-        padding: 2rem 1.5rem;
+        padding: 2rem 0; /* Removido padding horizontal */
     }
 
     .container-footer {
@@ -454,15 +454,15 @@
     }
 
     .inicio, .sobre, .skills, .servicos, .free-your-mind, .portfolio, .contato {
-        padding: 4rem 1rem;
+        padding: 4rem 0; /* Removido padding horizontal */
     }
 
     .titulo-inicio, .headline-portfolio h2, .titulo-servicos h1, .container-contato h2 {
-        font-size: clamp(2rem, 10vw + 0.5rem, 5rem);
+        font-size: clamp(1.5rem, 10vw + 0.5rem, 5rem); /* Reduzido valor mínimo */
     }
 
     .paragrafo-inicio p, .descricao-servicos, .headline-portfolio .descricao, .container-contato > p {
-        font-size: clamp(0.85rem, 1.5vw + 0.1rem, 1.1rem);
+        font-size: clamp(0.75rem, 1.5vw + 0.1rem, 1.1rem); /* Reduzido valor mínimo */
     }
 
     .cta {
@@ -482,15 +482,15 @@
     }
 
     .headline-scroll span {
-        font-size: clamp(1.8rem, 8vw + 0.2rem, 4rem);
+        font-size: clamp(1.5rem, 8vw + 0.2rem, 4rem); /* Ajustado valor mínimo */
     }
 
     .textos-sobre h1 {
-        font-size: clamp(1.5rem, 3vw + 0.2rem, 2.5rem);
+        font-size: clamp(1.3rem, 3vw + 0.2rem, 2.5rem); /* Ajustado valor mínimo */
     }
 
     .textos-sobre p {
-        font-size: clamp(0.8rem, 1.2vw + 0.1rem, 1.1rem);
+        font-size: clamp(0.7rem, 1.2vw + 0.1rem, 1.1rem); /* Ajustado valor mínimo */
     }
 
     .redes-sociais a {
@@ -516,7 +516,7 @@
     }
 
     .card-titulo {
-        font-size: clamp(0.9rem, 1.8vw + 0.2rem, 1.3rem);
+        font-size: clamp(0.8rem, 1.8vw + 0.2rem, 1.3rem); /* Ajustado valor mínimo */
     }
 
     .card-icon {
@@ -529,11 +529,11 @@
     }
 
     .container-free-your-mind span {
-        font-size: clamp(1.5rem, 8vw + 0.2rem, 6rem);
+        font-size: clamp(1.2rem, 8vw + 0.2rem, 6rem); /* Ajustado valor mínimo */
     }
 
     .projetos-portfolio {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        grid-template-columns: 1fr;
     }
 
     .projeto img {

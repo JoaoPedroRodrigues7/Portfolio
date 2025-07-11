@@ -58,7 +58,7 @@ body {
     justify-content: center;
     font-family: var(--font-body);
     color: var(--color-white); /* Cor padrão do texto */
-    overflow-x: hidden;
+    overflow-x: hidden; /* Essencial para evitar rolagem horizontal */
     -webkit-overflow-scrolling: touch;
     transition: transform 0.3s ease-out;
 }
@@ -155,7 +155,7 @@ a {
     user-select: none;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%; /* Alterado de 100vw para 100% */
     padding: 1.5rem 2rem; /* Ajuste de padding */
     display: flex;
     align-items: center;
@@ -408,7 +408,7 @@ a {
 .complemento-inicio {
     position: absolute;
     bottom: 2rem;
-    width: 100vw;
+    width: 100%; /* Alterado de 100vw para 100% */
     padding: 0rem 2rem;
     display: flex;
     align-items: center;
@@ -741,7 +741,7 @@ a {
 /*************** SERVIÇOS *****/
 .servicos {
     background-color: var(--color-white);
-    width: 100vw;
+    width: 100%; /* Alterado de 100vw para 100% */
     height: auto; /* Ajustar altura */
     display: flex;
     align-items: center;
@@ -862,7 +862,7 @@ a {
 /*************** ALGUMA FRASE AQUI  *****/
 .free-your-mind {
     background-color: var(--color-white);
-    width: 100vw;
+    width: 100%; /* Alterado de 100vw para 100% */
     height: auto; /* Ajustar altura */
     display: flex;
     align-items: center;
@@ -1041,7 +1041,7 @@ a {
 
 /*************** CONTATO *****/
 .contato {
-    width: 100vw;
+    width: 100%; /* Alterado de 100vw para 100% */
     height: auto;
     display: flex;
     padding: 7rem 2rem; /* Ajuste de padding */
