@@ -63,6 +63,10 @@ body {
     transition: transform 0.3s ease-out;
 }
 
+body.no-scroll {
+    overflow: hidden; /* Impede o scroll quando o menu está aberto */
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--color-white);
@@ -377,8 +381,8 @@ a {
 .cta svg {
     position: relative;
     top: 0;
-    margin-left: 12px;
-    fill: none;
+    margin-left: 12px    
+    fill none;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke: var(--color-white); /* Cor da seta */
