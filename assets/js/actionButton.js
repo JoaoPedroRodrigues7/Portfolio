@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Ajusta para garantir que o site comece no topo ao recarregar
-    // Removido o hash #inicio para permitir que o usuário volte à posição de scroll
-    // se ele recarregar a página em outra seção.
-    // Se você realmente quer que SEMPRE comece no início, descomente a linha abaixo:
-    /*
-    if (window.location.hash !== '#inicio') {
-        window.location.hash = '#inicio';
-    }
-    */
-
     const backToTopButton = document.getElementById('backToTop');
     const whatsappButton = document.getElementById('whatsappButton');
 
@@ -32,20 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Ação ao clicar no botão do WhatsApp
-    // O link já está no HTML, então esta função pode ser simplificada ou removida se o link direto for suficiente.
-    // Mantido para consistência, mas o href no HTML já faz o trabalho.
+    // Ação ao clicar no botão do WhatsApp (o link já está no HTML)
     whatsappButton.addEventListener('click', function (event) {
-        // Previne o comportamento padrão do link se você quiser adicionar alguma lógica JS antes
+        // Opcional: Adicione lógica aqui se precisar de algo antes de abrir o link
         // event.preventDefault();
-        // window.open(this.href, '_blank'); // Abre em nova aba
+        // window.open(this.href, '_blank');
     });
 
     // Inicializa a visibilidade dos botões ao carregar a página
     toggleButtons();
 
     // Inicialização do Particles.js
-    // Certifique-se de que o arquivo particles.min.js esteja carregado antes deste script.
     if (typeof particlesJS !== 'undefined') {
         particlesJS("particles-js", {
             "particles": {
@@ -69,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         "nb_sides": 5
                     },
                     "image": {
-                        "src": "", // Removido link para imagem de github.svg se não for usar
+                        "src": "",
                         "width": 100,
                         "height": 100
                     }
@@ -159,36 +146,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } else {
         console.warn("Particles.js library not found. Please ensure 'particles.min.js' is loaded before 'actionButton.js'.");
-    }
-
-
-    // Inicialização e atualização do Stats.js
-    // O Stats.js é geralmente usado para depuração de performance.
-    // Se não for necessário para o usuário final, pode ser removido.
-    var count_particles, stats, update;
-    if (typeof Stats !== 'undefined') {
-        stats = new Stats;
-        stats.setMode(0); // 0: fps, 1: ms
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.left = '0px';
-        stats.domElement.style.top = '0px';
-        stats.domElement.style.zIndex = '9999'; // Garante que fique visível
-        document.body.appendChild(stats.domElement);
-        count_particles = document.querySelector('.js-count-particles');
-        update = function() {
-            stats.begin();
-            stats.end();
-            if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-            }
-            requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-    } else {
-        console.warn("Stats.js library not found. The particle counter will not be displayed.");
-        const countParticlesElement = document.querySelector('.count-particles');
-        if (countParticlesElement) {
-            countParticlesElement.style.display = 'none'; // Esconde o contador se Stats.js não estiver presente
-        }
     }
 });

@@ -229,16 +229,25 @@
         border-radius: var(--border-radius-medium);
     }
 
-    .card-titulo {
+    .card-content { /* Adicionado para responsividade */
         width: 100%;
+        text-align: left;
+    }
+
+    .card-titulo {
         font-size: clamp(0.9rem, 2vw + 0.3rem, 1.5rem); /* Ajustado valor mínimo */
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem; /* Ajustado para a nova estrutura */
+    }
+
+    .card-description { /* Adicionado para responsividade */
+        font-size: clamp(0.75rem, 1.5vw + 0.1rem, 1.1rem);
     }
 
     .card-icon {
         width: 80px;
         height: 40px;
         border-radius: var(--border-radius-large);
+        margin-top: 1rem; /* Adicionado para espaçamento */
     }
 
     .card-icon i {
@@ -367,6 +376,7 @@
 
     .info-contato p {
         font-size: 1rem;
+        justify-content: center; /* Centralizar texto e ícone */
     }
 
     .info-contato a {

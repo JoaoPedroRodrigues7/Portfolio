@@ -382,7 +382,7 @@ a {
     position: relative;
     top: 0;
     margin-left: 12px    
-    fill none;
+    fill none; /* Corrigido: fill none */
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke: var(--color-white); /* Cor da seta */
@@ -837,12 +837,25 @@ a {
     gap: 5%; /* Ajuste de gap */
 }
 
+.card-content { /* Adicionado para envolver título e descrição */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 70%; /* Ajuste a largura conforme necessário */
+}
+
 .card-titulo {
-    width: 70%; /* Ajuste de largura */
     font-size: clamp(1.2rem, 2.5vw + 0.5rem, 2rem);
     font-family: var(--font-display); /* Usar fonte de display */
     font-weight: 600;
     color: var(--color-black);
+}
+
+.card-description { /* Adicionado para a descrição do serviço */
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-medium-gray);
+    line-height: 1.5;
 }
 
 .card-icon {
@@ -1039,10 +1052,6 @@ a {
     transform: translateY(-3px); /* Pequeno levantamento no hover */
 }
 
-/* Os estilos abaixo podem ser mantidos, caso usados em outras seções */
-/* Removido estilos de .container-case, .case1, .case2, etc. para simplificar */
-/* Se você ainda usa o slide de imagens, mantenha os estilos relevantes */
-
 /*************** CONTATO *****/
 .contato {
     width: 100%; /* Alterado de 100vw para 100% */
@@ -1177,6 +1186,9 @@ a {
     font-size: 1.1rem;
     color: var(--color-black);
     line-height: 1.5;
+    display: flex; /* Para alinhar texto e ícone */
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento entre texto e ícone */
 }
 
 .info-contato p strong {

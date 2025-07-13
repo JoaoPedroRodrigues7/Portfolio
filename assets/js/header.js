@@ -29,18 +29,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Opcional: Esconder/mostrar o header ao rolar
+    // Esconder/mostrar o header ao rolar
     let lastScrollTop = 0;
     window.addEventListener('scroll', function() {
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        // Verifica se o menu não está aberto antes de esconder o header
+        if (!menuToggle.checked) {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll > lastScrollTop && currentScroll > header.offsetHeight) {
-            // Rolando para baixo e já passou do header
-            header.style.top = "-100px"; // Esconde o header
-        } else {
-            // Rolando para cima ou no topo da página
-            header.style.top = "0"; // Mostra o header
+            if (currentScroll > lastScrollTop && currentScroll > header.offsetHeight) {
+                // Rolando para baixo e já passou do header
+                header.style.top = "-100px"; // Esconde o header
+            } else {
+                // Rolando para cima ou no topo da página
+                header.style.top = "0"; // Mostra o header
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para evitar valores negativos
         }
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para evitar valores negativos
     }, false);
 });

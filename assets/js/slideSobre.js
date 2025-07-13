@@ -18,18 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Cria e adiciona um estilo CSS para a animação de rolagem
-// Esta parte do CSS pode ser movida para o arquivo style.css se preferir,
-// mas mantida aqui para demonstrar que é gerada dinamicamente para o efeito.
-const styleSheet = document.createElement('style');
-styleSheet.type = 'text/css';
-styleSheet.innerText = `
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}`;
-document.head.appendChild(styleSheet);
+// A parte do CSS para a animação de rolagem já está no style.css,
+// então não é necessário gerá-la dinamicamente aqui.
+// Removido o código de criação de styleSheet para evitar duplicação.
