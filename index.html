@@ -50,11 +50,8 @@
 <body>
 
     <!-- particles.js container -->
+    <!-- Removido o contador de partículas para um visual mais limpo, a menos que seja essencial para depuração -->
     <div id="particles-js" aria-hidden="true"></div>
-    <!-- stats - count particles (opcional, para depuração) -->
-    <div class="count-particles" aria-hidden="true">
-        <span class="js-count-particles">--</span> particles
-    </div>
 
     <!--Botão voltar ao topo-->
     <button id="backToTop" class="fixed-button" aria-label="Voltar ao topo">
@@ -119,6 +116,7 @@
                     </button>
                 </div>
                 <div class="complemento-inicio">
+                    <!-- Imagens de complemento com melhor qualidade ou SVG seriam ideais -->
                     <img class="text" src="assets/img/complemento.png" alt="Texto decorativo 'Desenvolvedor Front-end'" loading="lazy">
                     <img class="qr-code" src="assets/img/qr_code_rmdeveloper.png" alt="QR Code para o link da bio" loading="lazy">
                 </div>
@@ -162,9 +160,11 @@
                     </div>
                     <div class="right-sobre" data-aos="fade-left" data-aos-duration="1000">
                         <div class="imagem-sobre">
+                            <!-- Certifique-se de que esta imagem tenha fundo transparente ou que o fundo da seção seja ajustado -->
                             <img src="assets/img/Adobe Express - file.png" alt="Foto de João Pedro Rodrigues" loading="lazy">
                         </div>
                         <div class="complemento-sobre">
+                            <!-- Considere substituir esta imagem por um SVG animado para melhor qualidade -->
                             <img src="assets/img/txt gira.png" alt="Texto giratório decorativo" loading="lazy">
                         </div>
                     </div>
@@ -178,7 +178,7 @@
             <div class="container-skills" data-aos="fade-up" data-aos-duration="1000">
                 <div class="headline-skills">
                     <div class="text-headline-skills" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        <h2>Minhas Skills</h2>
+                        <h2>Minhas Habilidades</h2> <!-- Alterado de "Skills" para "Habilidades" para consistência em português -->
                         <p>Tenho conhecimentos em diversas tecnologias e ferramentas para desenvolvimento web e sistemas.</p>
                     </div>
                 </div>
@@ -310,10 +310,11 @@
                     </div>
                     <!-- Exemplo de um novo projeto (adicione mais conforme necessário) -->
                     <div class="projeto" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-                        <img src="assets/img/placeholder.png" alt="Projeto E-commerce Simples" loading="lazy"> <!-- Substitua por uma imagem real -->
+                        <!-- Substitua por uma imagem real e um link válido -->
+                        <img src="assets/img/placeholder.png" alt="Projeto E-commerce Simples" loading="lazy">
                         <h3>E-commerce Simples</h3>
                         <p>Um protótipo de loja virtual com funcionalidades básicas de carrinho e listagem de produtos.</p>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a> <!-- Substitua pelo link real -->
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
                     </div>
                 </div>
             </div>
@@ -360,7 +361,7 @@
                     <ul class="footer-nav">
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#skills">Habilidades</a></li> <!-- Alterado para "Habilidades" -->
                         <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
@@ -396,11 +397,17 @@
     <!-- particles.js lib -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- stats.js lib -->
-    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <!-- Removido o script stats.min.js e o div .count-particles para um visual mais limpo, a menos que seja essencial para depuração -->
+    <!-- <script src="http://threejs.org/examples/js/libs/stats.min.js"></script> -->
+
     <!-- Custom JS (agora incluindo a lógica do actionButton e particles.js) -->
     <script src="assets/js/actionButton.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/slideSobre.js"></script>
+    <!-- O slidePortfolio.js não está sendo usado no HTML atual, então pode ser removido se não houver planos de usá-lo -->
+    <!-- <script src="assets/js/slidePortfolio.js"></script> -->
+    <!-- O menu.js é redundante, pois a lógica do menu já está em header.js -->
+    <!-- <script src="assets/js/menu.js"></script> -->
 
 </body>
 
