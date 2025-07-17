@@ -151,6 +151,10 @@
         position: static;
         justify-content: center;
     }
+    .imagem-sobre img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .complemento-sobre {
