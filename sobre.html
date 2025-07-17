@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - João Pedro Rodrigues</title>
+    <meta name="description" content="Saiba mais sobre João Pedro Rodrigues, Desenvolvedor Front-end.">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/sobre-page.css">
+    <link rel="stylesheet" href="assets/css/responsividade.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+
+    <!--Botão voltar ao topo-->
+    <button id="backToTop" class="fixed-button" aria-label="Voltar ao topo">
+        <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!--Botão WhatsApp-->
+    <a id="whatsappButton" class="fixed-button" href="https://wa.me/5588988796132" target="_blank" rel="noopener noreferrer" aria-label="Fale comigo no WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <div class="container">
+        
+        <!-- Header (copie o mesmo do index.html, ajustando os hrefs) -->
+        <header class="header">
+            <div class="menu">
+                <label class="hamburger" for="menuToggle" aria-label="Abrir menu de navegação">
+                    <input type="checkbox" id="menuToggle">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="menu-aberto" role="navigation" aria-label="Menu principal">
+                <nav class="nav-menu">
+                    <a href="index.html">INÍCIO</a>
+                    <a href="sobre.html">SOBRE</a>
+                    <a href="skills.html">SKILLS</a>
+                    <a href="portfolio.html">PORTFÓLIO</a>
+                    <a href="contato.html">CONTATO</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Conteúdo da seção Sobre -->
+        <section id="sobre" class="sobre">
+            <div class="container-sobre">
+                <!--Slide Sobre-->
+                <div class="headline-sobre" data-aos="fade-up" data-aos-duration="1000" style="height: 0; margin: 0; padding: 0;">
+                    
+                </div>
+                <div class="conteudo-sobre">
+                    <div class="left-sobre" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="textos-sobre">
+<h1>Olá, me chamo <span class="nome">João Pedro Rodrigues</span></h1>
+                            <p>Atuo na área de Análise e Desenvolvimento de Sistemas com foco em front-end, utilizando HTML, CSS, JavaScript e ferramentas de desenvolvimento web. Tenho conhecimentos em Git, GitHub, bancos de dados, Java e Excel avançado. Sou dedicado, curioso e comprometido em aprimorar minhas habilidades para contribuir cada vez mais com projetos tecnológicos.
+                            </p>
+                        </div>
+                        <div class="redes-sociais">
+                            <a href="https://www.instagram.com/j.pedrox7__/" target="_blank" rel="noopener noreferrer" aria-label="Visitar meu Instagram">INSTAGRAM<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            <a href="https://github.com/JoaoPedroRodrigues7" target="_blank" rel="noopener noreferrer" aria-label="Visitar meu GitHub">GITHUB<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/matias.riquelme.7906/?_rdr" target="_blank" rel="noopener noreferrer" aria-label="Visitar meu Facebook">FACEBOOK<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rodrigues-599a81352/" target="_blank" rel="noopener noreferrer" aria-label="Visitar meu LinkedIn">LINKEDIN<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="right-sobre" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="imagem-sobre">
+                            <img src="assets/img/Adobe Express - file.png" alt="Foto de João Pedro Rodrigues" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (copie o mesmo do index.html, ajustando os hrefs) -->
+        <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
+        </footer>
+
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <!-- Custom JS -->
+    <script src="assets/js/actionButton.js" defer></script>
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/slideSobre.js" defer></script> <!-- Mantenha este script apenas na página "Sobre" se ele for específico para ela -->
+
+    
+</body>
+
+</html>

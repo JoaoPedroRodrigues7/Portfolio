@@ -1,180 +1,335 @@
-/* Responsividade para iPad (tablet) e telas menores */
+/* Responsividade para iPad (tablet) */
 @media (max-width: 1024px) {
 
     .container {
-        padding: 0 1.5rem; /* Adicionado padding horizontal ao container */
+        padding: 0;
     }
 
-    /* Header */
-    .header {
-        padding: 1.2rem 1.5rem;
+    /************************** SOBRE ***/
+    .sobre {
+        height: auto;
     }
 
-    .logo img {
+    .container-sobre {
+        height: auto;
+    }
+
+    .headline-sobre {
+        height: auto;
+        position: relative;
+    }
+
+    .conteudo-sobre {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 3rem;
+    }
+
+    .left-sobre {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-sobre {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagem-sobre {
+        justify-content: center;
+        position: relative; /* Ajustado para relativo */
+        left: auto;
+        top: auto;
+    }
+
+    .complemento-sobre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .complemento-sobre img {
+        position: unset;
+        width: 100%;
+    }
+
+    /************************** SERVIÇOS ***/
+
+    .headline-servicos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .titulo-servicos {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .titulo-servicos h1 {
+        font-size: 6rem;
+    }
+
+    .descricao-servicos {
+        width: 100%;
+        text-align: right;
+        font-size: 1.4rem;
+    }
+
+    .card-servicos,
+    .card-servicos-left {
+        max-width: 100%;
+        margin-left: 0;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .card-titulo {
+        width: 100%;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-icon {
         width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-top: 1rem;
     }
+
+    /************************** PORTFOLIO ***/
+
+    .container-portfolio {
+        gap: 3rem;
+        padding: 2rem 1rem;
+    }
+
+    .headline-portfolio {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .headline-portfolio .titulo {
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    .headline-portfolio .descricao {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .projetos-portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .projeto img {
+        height: 180px;
+    }
+
+    .projeto h3 {
+        font-size: 1.6rem;
+    }
+
+    .projeto p {
+        font-size: 0.95rem;
+    }
+
+    /************************** CONTATO ***/
+    .contato {
+        padding: 0rem 1rem 2rem 1rem;
+        height: auto;
+    }
+
+    .container-contato {
+        width: 100%;
+        height: auto;
+    }
+
+    .headline-contato {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .titulo-contato {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .titulo-contato h1 {
+        font-size: 6rem;
+    }
+
+    .descricao-contato {
+        width: 100%;
+        text-align: right;
+        font-size: 1.4rem;
+    }
+
+    .conteudo-contato {
+        padding-top: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    .info-contato { /* Ajuste para telas menores */
+        width: 100%;
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+    }
+
+    .info-contato p {
+        justify-content: center; /* Centraliza o texto e ícone */
+    }
+
+    .logo-contato {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-contato img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .formulario-contato {
+        width: 100%;
+    }
+
+    .credits-column {
+        width: auto;
+        text-align: right;
+        margin-top: 0;
+    }
+
+    /************************** FOOTER ***/
+    .footer .container-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-column {
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo-column {
+        align-items: center;
+    }
+
+    .footer-nav {
+        align-items: center;
+    }
+
+    .social-column {
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+    .credits-column {
+        text-align: center;
+    }
+}
+
+/* Responsividade para Celulares (menor que iPad) */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    /* .logo img { REMOVIDO: logo foi removida do HTML */
+        /* width: 120px; */
+    /* } */
 
     .hamburger svg {
-        height: 3em;
+        height: 2.5em;
     }
 
     .nav-menu a {
         font-size: 2.5rem;
     }
 
-    /************************** INICIO ***/
     .inicio {
-        padding: 0; /* Removido padding horizontal, o container já tem */
+        padding: 0rem 0.5rem;
     }
 
     .titulo-inicio {
-        font-size: clamp(1.8rem, 5vw + 0.8rem, 4rem); /* Ajustado valor mínimo */
+        font-size: clamp(1.5rem, 8vw, 3rem);
     }
 
     .paragrafo-inicio p {
-        font-size: clamp(0.9rem, 1.5vw + 0.2rem, 1.5rem); /* Ajustado valor mínimo */
-    }
-
-    .cta {
-        padding: 12px 20px;
+        font-size: clamp(1rem, 4vw, 1.5rem);
     }
 
     .cta span {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
-    .complemento-inicio {
-        padding: 0 1.5rem;
-    }
+    /* .complemento-inicio .text { REMOVIDO: complemento-inicio foi removido do HTML */
+        /* width: 150px; */
+    /* } */
 
-    .complemento-inicio .text {
-        width: 150px;
-    }
-
-    .complemento-inicio .qr-code {
-        width: 60px;
-    }
-
-    /************************** SOBRE ***/
-    .sobre {
-        height: auto;
-        padding: 3rem 0; /* Removido padding horizontal */
-    }
-
-    .container-sobre {
-        padding-top: 10vh; /* Ajuste para o headline menor */
-        height: auto;
-    }
-
-    .headline-sobre {
-        height: 10vh; /* Altura menor para o headline */
-    }
+    /* .complemento-inicio .qr-code { REMOVIDO: complemento-inicio foi removido do HTML */
+        /* width: 60px; */
+    /* } */
 
     .headline-scroll span {
-        font-size: clamp(2rem, 6vw + 0.5rem, 6rem); /* Ajustado valor mínimo */
-        padding: 0 1rem;
+        font-size: 3rem;
     }
 
     .headline-scroll .divisor {
-        width: 12px;
-        height: 12px;
-        margin: 0 1rem;
-    }
-
-    .conteudo-sobre {
-        flex-direction: column-reverse; /* Inverter ordem para mobile */
-        height: auto;
-        gap: 3rem;
-        align-items: center; /* Centraliza os itens flex na coluna */
+        width: 15px;
+        height: 15px;
+        margin: 0 15px;
     }
 
     .left-sobre {
-        width: 100%;
-        height: auto;
-        align-items: center; /* Centralizar texto */
-        text-align: center;
+        gap: 2rem;
     }
 
     .textos-sobre h1 {
-        font-size: clamp(1.6rem, 3.5vw + 0.5rem, 3rem); /* Ajustado valor mínimo */
+        font-size: 2.5rem;
     }
 
     .textos-sobre p {
-        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
-    }
-
-    .redes-sociais {
-        align-items: center; /* Centralizar links de redes sociais */
+        font-size: 1.2rem;
     }
 
     .redes-sociais a {
-        width: 80%; /* Limitar largura para centralizar */
-        max-width: 300px;
+        font-size: 1.2rem;
     }
 
-    .right-sobre {
-        width: 100%; /* Ocupa a largura total disponível */
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center; /* Centraliza o conteúdo da direita */
-        position: relative; /* Garante que o complemento possa ser posicionado em relação a ele */
-    }
-
-    .imagem-sobre {
-        width: 100%; /* Ocupa a largura total do right-sobre */
-        height: auto;
-        justify-content: center; /* Centraliza a imagem dentro do imagem-sobre */
-        align-items: center;
-        position: relative; /* Manter relative */
-    }
-
-    .imagem-sobre img {
-        width: 80%; /* Ajuste de tamanho para a imagem principal */
-        max-width: 350px; /* Limite máximo */
-        display: block; /* Garante que a imagem se comporte como um bloco */
-        margin: 0 auto; /* Centraliza a imagem dentro do seu contêiner */
-    }
-
-    .complemento-sobre {
-        position: absolute; /* Manter absoluto */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Centralizar */
-        width: 100%; /* Ajuste para o tamanho do right-sobre */
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 0;
-    }
-
-    .complemento-sobre img {
-        width: 60%; /* Ajuste de tamanho para o texto giratório */
-        max-width: 250px;
-    }
-
-    /************************** SKILLS ***/
     .skills {
-        padding: 5rem 0; /* Removido padding horizontal */
+        padding: 5rem 0.5rem;
     }
 
-    .text-headline-skills h2 {
-        font-size: clamp(1.8rem, 4vw + 0.5rem, 3.5rem); /* Ajustado valor mínimo */
+    .headline-skills h2 { /* Alterado de .text-headline-skills h2 */
+        font-size: 2.5rem;
     }
 
-    .text-headline-skills p {
-        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
+    .headline-skills p { /* Alterado de .text-headline-skills p */
+        font-size: 1.2rem;
     }
 
     .conteudo-skills {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+        grid-template-columns: 1fr;
     }
 
     .box-skills {
+        height: auto;
         padding: 1.5rem;
-        min-height: 250px;
     }
 
     .box-skills i {
@@ -182,425 +337,126 @@
     }
 
     .box-skills h3 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .box-skills p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
-    /************************** SERVIÇOS ***/
     .servicos {
-        padding: 5rem 0; /* Removido padding horizontal */
-    }
-
-    .headline-servicos {
-        flex-direction: column;
-        height: auto;
-        align-items: flex-start;
-        margin-bottom: 2rem;
-    }
-
-    .titulo-servicos {
-        width: 100%;
-        justify-content: flex-start;
-        margin-bottom: 1rem;
+        padding: 1.5rem 0.5rem;
     }
 
     .titulo-servicos h1 {
-        font-size: clamp(2.5rem, 8vw + 1rem, 6rem); /* Ajustado valor mínimo */
+        font-size: 4rem;
     }
 
     .descricao-servicos {
-        width: 100%;
-        text-align: left;
-        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
-    }
-
-    .servicos-cards {
-        gap: 1rem;
-    }
-
-    .card-servicos, .card-servicos-left {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.5rem;
-        min-height: auto;
-        border-radius: var(--border-radius-medium);
-    }
-
-    .card-content { /* Adicionado para responsividade */
-        width: 100%;
-        text-align: left;
+        font-size: 1.2rem;
     }
 
     .card-titulo {
-        font-size: clamp(0.9rem, 2vw + 0.3rem, 1.5rem); /* Ajustado valor mínimo */
-        margin-bottom: 0.5rem; /* Ajustado para a nova estrutura */
-    }
-
-    .card-description { /* Adicionado para responsividade */
-        font-size: clamp(0.75rem, 1.5vw + 0.1rem, 1.1rem);
+        font-size: 1.2rem;
     }
 
     .card-icon {
-        width: 80px;
-        height: 40px;
-        border-radius: var(--border-radius-large);
-        margin-top: 1rem; /* Adicionado para espaçamento */
+        width: 60px;
+        height: 60px;
     }
 
     .card-icon i {
         font-size: 1.5rem;
     }
 
-    /************************** FRASE DE IMPACTO ***/
-    .free-your-mind {
-        padding: 3rem 0; /* Removido padding horizontal */
-    }
-
     .container-free-your-mind span {
-        font-size: clamp(1.8rem, 8vw + 0.5rem, 8rem); /* Ajustado valor mínimo */
+        font-size: 10vw;
     }
 
     .line {
-        margin: 0 1rem;
+        margin: 0 2rem;
     }
 
-    /************************** PORTFOLIO ***/
     .portfolio {
-        padding: 5rem 0; /* Removido padding horizontal */
+        padding: 1.5rem 0.5rem 5rem 0.5rem;
     }
 
-    .headline-portfolio {
-        flex-direction: column;
-        height: auto;
-        align-items: flex-start;
-        margin-bottom: 2rem;
-    }
-
-    .headline-portfolio h2 {
-        width: 100%;
-        font-size: clamp(2.5rem, 8vw + 1rem, 6rem); /* Ajustado valor mínimo */
-        margin-bottom: 1rem;
+    .headline-portfolio .titulo {
+        font-size: 3rem;
     }
 
     .headline-portfolio .descricao {
-        width: 100%;
-        text-align: left;
-        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
-    }
-
-    .projetos-portfolio {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .projeto {
-        padding: 1rem;
-    }
-
-    .projeto img {
-        height: 150px;
-        margin-bottom: 1rem;
-    }
-
-    .projeto h3 {
-        font-size: 1.2rem;
-    }
-
-    .projeto p {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-    }
-
-    .projeto a {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-
-    /************************** CONTATO ***/
-    .contato {
-        padding: 5rem 0; /* Removido padding horizontal */
-        height: auto;
-    }
-
-    .container-contato {
-        height: auto;
-        padding-bottom: 2rem;
-    }
-
-    .container-contato h2 {
-        font-size: clamp(2.5rem, 8vw + 1rem, 6rem); /* Ajustado valor mínimo */
-    }
-
-    .container-contato > p {
-        font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1.2rem); /* Ajustado valor mínimo */
-        margin-bottom: 2rem;
-    }
-
-    .conteudo-contato {
-        flex-direction: column-reverse; /* Inverter ordem para mobile */
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .formulario-contato {
-        width: 100%;
-        padding: 0;
-    }
-
-    .form input,
-    .form textarea {
-        height: 45px;
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .form textarea {
-        min-height: 120px;
-    }
-
-    .form .btn {
-        width: 180px;
-        padding: 0.8rem 0;
-        font-size: 0.9rem;
-    }
-
-    .info-contato {
-        width: 100%;
-        padding-top: 0;
-        text-align: center; /* Centralizar informações de contato */
-        align-items: center;
-    }
-
-    .info-contato p {
         font-size: 1rem;
-        justify-content: center; /* Centralizar texto e ícone */
-    }
-
-    .info-contato a {
-        font-size: 1rem;
-    }
-
-    .logo-contato {
         width: 100%;
-        margin-top: 1.5rem;
-    }
-
-    .logo-contato img {
-        width: 70%;
-        max-width: 300px;
-    }
-
-    /************************** FOOTER ***/
-    .footer {
-        padding: 2rem 0; /* Removido padding horizontal */
-    }
-
-    .container-footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .footer-column {
-        width: 100%;
-        align-items: center; /* Centralizar colunas no mobile */
-        text-align: center;
-    }
-
-    .logo-column img {
-        width: 60px;
-    }
-
-    .footer-nav, .social-links {
-        align-items: center; /* Centralizar listas */
-    }
-
-    .social-links a {
-        flex-direction: row; /* Manter ícone e texto na mesma linha */
-        justify-content: center;
-    }
-
-    .credits-column {
-        padding-top: 1rem;
-    }
-
-    .credits-column p {
-        font-size: 0.8rem;
-    }
-}
-
-/* Responsividade para telas muito pequenas (celulares) */
-@media (max-width: 480px) {
-    .header {
-        padding: 1rem;
-    }
-
-    .logo img {
-        width: 70px;
-    }
-
-    .hamburger svg {
-        height: 2.5em;
-    }
-
-    .nav-menu a {
-        font-size: 2rem;
-    }
-
-    .fixed-button {
-        width: 45px;
-        height: 45px;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-    }
-
-    .fixed-button i {
-        font-size: 22px;
-    }
-
-    .inicio, .sobre, .skills, .servicos, .free-your-mind, .portfolio, .contato {
-        padding: 4rem 0; /* Removido padding horizontal */
-    }
-
-    .titulo-inicio, .headline-portfolio h2, .titulo-servicos h1, .container-contato h2 {
-        font-size: clamp(1.5rem, 10vw + 0.5rem, 5rem); /* Reduzido valor mínimo */
-    }
-
-    .paragrafo-inicio p, .descricao-servicos, .headline-portfolio .descricao, .container-contato > p {
-        font-size: clamp(0.75rem, 1.5vw + 0.1rem, 1.1rem); /* Reduzido valor mínimo */
-    }
-
-    .cta {
-        padding: 10px 15px;
-    }
-
-    .cta span {
-        font-size: 0.9rem;
-    }
-
-    .complemento-inicio .text {
-        width: 120px;
-    }
-
-    .complemento-inicio .qr-code {
-        width: 50px;
-    }
-
-    .headline-scroll span {
-        font-size: clamp(1.5rem, 8vw + 0.2rem, 4rem); /* Ajustado valor mínimo */
-    }
-
-    .textos-sobre h1 {
-        font-size: clamp(1.3rem, 3vw + 0.2rem, 2.5rem); /* Ajustado valor mínimo */
-    }
-
-    .textos-sobre p {
-        font-size: clamp(0.7rem, 1.2vw + 0.1rem, 1.1rem); /* Ajustado valor mínimo */
-    }
-
-    .redes-sociais a {
-        font-size: 1rem;
-        width: 90%;
-    }
-
-    .box-skills {
-        padding: 1rem;
-        min-height: 200px;
-    }
-
-    .box-skills i {
-        font-size: 2.5rem;
-    }
-
-    .box-skills h3 {
-        font-size: 1.2rem;
-    }
-
-    .box-skills p {
-        font-size: 0.8rem;
-    }
-
-    .card-titulo {
-        font-size: clamp(0.8rem, 1.8vw + 0.2rem, 1.3rem); /* Ajustado valor mínimo */
-    }
-
-    .card-icon {
-        width: 70px;
-        height: 35px;
-    }
-
-    .card-icon i {
-        font-size: 1.2rem;
-    }
-
-    .container-free-your-mind span {
-        font-size: clamp(1.2rem, 8vw + 0.2rem, 6rem); /* Ajustado valor mínimo */
     }
 
     .projetos-portfolio {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .projeto img {
-        height: 120px;
+        height: 150px;
     }
 
     .projeto h3 {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 
     .projeto p {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 
-    .projeto a {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+    .contato {
+        padding: 0rem 0.5rem 1.5rem 0.5rem;
+    }
+
+    .titulo-contato h1 {
+        font-size: 4rem;
+    }
+
+    .descricao-contato { /* Ajustado para ser um parágrafo */
+        font-size: 1.2rem;
+    }
+
+    .formulario-contato {
+        /* h2 e p removidos, não precisam de estilo aqui */
     }
 
     .form input,
     .form textarea {
-        height: 40px;
-        padding: 0.6rem 0.8rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        padding: 1rem 0.8rem;
     }
 
-    .form textarea {
-        min-height: 100px;
-    }
-
-    .form .btn {
+    .btn {
         width: 150px;
-        padding: 0.7rem 0;
-        font-size: 0.8rem;
-    }
-
-    .info-contato p {
-        font-size: 0.9rem;
-    }
-
-    .info-contato a {
-        font-size: 0.9rem;
+        padding: 0.8rem 0rem;
+        font-size: 1rem;
     }
 
     .logo-contato img {
-        width: 60%;
+        max-height: 300px;
     }
 
-    .footer-column h4 {
-        font-size: 1.1rem;
+    .footer {
+        padding: 2rem 0.5rem;
     }
 
-    .footer-nav a, .social-links a {
-        font-size: 0.9rem;
+    .footer-column {
+        gap: 0.8rem;
     }
 
-    .social-links a i {
+    .logo-column img {
+        width: 80px;
+    }
+
+    .footer-nav a,
+    .social-links a {
         font-size: 1rem;
+    }
+
+    .credits-column p {
+        font-size: 0.8rem;
     }
 }

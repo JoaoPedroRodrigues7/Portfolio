@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - João Pedro Rodrigues</title>
+    <meta name="description" content="Entre em contato com João Pedro Rodrigues, Desenvolvedor Front-end.">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/contact-page.css">
+    <link rel="stylesheet" href="assets/css/responsividade.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+
+    <!--Botão voltar ao topo-->
+    <button id="backToTop" class="fixed-button" aria-label="Voltar ao topo">
+        <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!--Botão WhatsApp-->
+    <a id="whatsappButton" class="fixed-button" href="https://wa.me/5588988796132" target="_blank" rel="noopener noreferrer" aria-label="Fale comigo no WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <div class="container">
+        
+        <!-- Header (copie o mesmo do index.html, ajustando os hrefs) -->
+        <header class="header">
+            <div class="menu">
+                <label class="hamburger" for="menuToggle" aria-label="Abrir menu de navegação">
+                    <input type="checkbox" id="menuToggle">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="menu-aberto" role="navigation" aria-label="Menu principal">
+                <nav class="nav-menu">
+                    <a href="index.html">INÍCIO</a>
+                    <a href="sobre.html">SOBRE</a>
+                    <a href="skills.html">SKILLS</a>
+                    <a href="portfolio.html">PORTFÓLIO</a>
+                    <a href="contato.html">CONTATO</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Conteúdo da seção Contato -->
+        <section id="contato" class="contato">
+            <div class="container-contato" data-aos="fade-up" data-aos-duration="1000">
+                <div class="headline-contato">
+                    <div class="titulo-contato" style="margin-top: 4rem;">
+                        <h1>Contato</h1>
+                    </div>
+                    <div class="descricao-contato">
+                        <p>Quer entrar em contato? Preencha o formulário ou envie uma mensagem pelo WhatsApp. Estou ansioso para discutir seu próximo projeto!</p>
+                    </div>
+                </div>
+
+                <div class="conteudo-contato">
+                    <div class="formulario-contato">
+                        <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" class="form" aria-label="Formulário de Contato">
+                            <input type="text" name="nome" placeholder="Seu nome" required aria-label="Seu nome">
+                            <input type="email" name="_replyto" placeholder="Seu email" required aria-label="Seu email">
+                            <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required aria-label="Sua mensagem"></textarea>
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+
+                    <div class="info-contato">
+                        <p><strong>Email:</strong> <a href="mailto:jprodridues2613@gmail.com">jprodridues2613@gmail.com</a> <i class="bi bi-envelope-fill" aria-hidden="true"></i></p>
+                        <p><strong>Telefone:</strong> <a href="tel:+5588988796132">(88) 98879-6132</a> <i class="bi bi-telephone-fill" aria-hidden="true"></i></p>
+                        <p><strong>Localização:</strong> Arneiroz, Ceará - Brasil <i class="bi bi-geo-alt-fill" aria-hidden="true"></i></p>
+                        <div class="logo-contato">
+                            <img src="assets/img/jpr.png" alt="Logo João Pedro Rodrigues" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (copie o mesmo do index.html, ajustando os hrefs) -->
+        <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container-footer">
+                <div class="footer-column logo-column">
+                    <img src="assets/img/jpr.png" alt="Logo João Pedro Rodrigues">
+                </div>
+                <div class="footer-column menu-column">
+                    <h4>Navegação</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="skills.html">Habilidades</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column social-column">
+                    <h4>Conecte-se</h4>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/j.pedrox7__/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a></li>
+                        <li><a href="https://github.com/JoaoPedroRodrigues7" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a></li>
+                        <li><a href="https://www.facebook.com/matias.riquelme.7906/?_rdr" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rodrigues-599a81352/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="credits-column">
+                <p>&copy; 2025 João Pedro Rodrigues. Todos os direitos reservados.</p>
+                <p>Desenvolvido com paixão por João Pedro Rodrigues.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <!-- Custom JS -->
+    <script src="assets/js/actionButton.js" defer></script>
+    <script src="assets/js/header.js" defer></script>
+
+</body>
+
+</html>

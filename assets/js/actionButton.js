@@ -2,149 +2,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const backToTopButton = document.getElementById('backToTop');
     const whatsappButton = document.getElementById('whatsappButton');
 
-    // Função para exibir ou esconder os botões ao rolar a página
     function toggleButtons() {
         const scrollPosition = window.scrollY;
-        if (scrollPosition > 300) { // Aparece após rolar 300px
-            backToTopButton.classList.add('show');
-            whatsappButton.classList.add('show');
+        if (scrollPosition > 200) { // Botões aparecem após rolar 200px
+            backToTopButton.style.display = 'flex';
+            whatsappButton.style.display = 'flex';
+            setTimeout(() => {
+                backToTopButton.style.opacity = '1';
+                whatsappButton.style.opacity = '1';
+            }, 10);
         } else {
-            backToTopButton.classList.remove('show');
-            whatsappButton.classList.remove('show');
+            backToTopButton.style.opacity = '0';
+            whatsappButton.style.opacity = '0';
+            setTimeout(() => {
+                backToTopButton.style.display = 'none';
+                whatsappButton.style.display = 'none';
+            }, 500); // Tempo de transição para desaparecer
         }
     }
 
-    // Adiciona o evento de scroll para exibir ou esconder os botões
     document.addEventListener('scroll', toggleButtons);
 
-    // Ação ao clicar no botão "Voltar ao Topo"
     backToTopButton.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Ação ao clicar no botão do WhatsApp (o link já está no HTML)
-    whatsappButton.addEventListener('click', function (event) {
-        // Opcional: Adicione lógica aqui se precisar de algo antes de abrir o link
-        // event.preventDefault();
-        // window.open(this.href, '_blank');
+    whatsappButton.addEventListener('click', function () {
+        // Substitua pelo seu número de WhatsApp com DDD, exemplo: '5521987654321'
+        window.open('https://wa.me/5588988796132', '_blank');
     });
 
-    // Inicializa a visibilidade dos botões ao carregar a página
+    // Garante que os botões apareçam se a página já estiver rolada ao carregar
     toggleButtons();
-
-    // Inicialização do Particles.js
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 236,
-                    "density": {
-                        "enable": true,
-                        "value_area": 787.7116975187079
-                    }
-                },
-                "color": {
-                    "value": "#16d48e" // Cor dos partículas
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    } else {
-        console.warn("Particles.js library not found. Please ensure 'particles.min.js' is loaded before 'actionButton.js'.");
-    }
 });
