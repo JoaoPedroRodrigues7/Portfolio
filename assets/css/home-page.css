@@ -38,7 +38,7 @@
 
 @media (max-width: 600px) {
     .titulo-inicio {
-        font-size: 0.9rem !important;
+        font-size: 1.6rem !important;
         white-space: nowrap !important;
     }
     #typewriter {
@@ -46,7 +46,7 @@
     }
     .destaque-inicio {
         white-space: nowrap !important;
-        font-size: 0.9rem !important;
+        font-size: 1.6rem !important;
     }
 }
 
