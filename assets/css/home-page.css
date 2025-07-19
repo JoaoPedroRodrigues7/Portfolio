@@ -43,6 +43,10 @@
     #typewriter {
         font-size: 1.6rem !important;
     }
+    .destaque-inicio {
+        white-space: nowrap;
+        font-size: 0.9rem !important;
+    }
 }
 
 .destaque-inicio {
