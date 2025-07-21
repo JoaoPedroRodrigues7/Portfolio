@@ -62,7 +62,7 @@ te /*************** PORTFOLIO *****/
     background-color: var(--color-black);
     border: 1px solid hsla(0, 0%, 100%, 0.15);
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to visible to prevent cutting content */
     display: flex;
     flex-direction: column;
     color: var(--color-white);
