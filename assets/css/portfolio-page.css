@@ -37,6 +37,7 @@ te /*************** PORTFOLIO *****/
     font-weight: lighter;
     font-family: var(--font-grande);
     margin-top: 6rem; /* Added margin to push title down */
+    color: white;
 }
 
 .headline-portfolio .descricao {
